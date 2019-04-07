@@ -119,6 +119,17 @@
   <ItemGroup>
     <Compile Include="Controls\Other\Growl.cs" />
     <Compile Include="Controls\Window\MessageBox.cs" />
+    <Compile Include="Properties\Langs\Lang.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Lang.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Properties\Langs\Lang.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Lang.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="..\..\Shared\HandyControl_Shared\HandyControl_Shared.projitems" Label="Shared" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

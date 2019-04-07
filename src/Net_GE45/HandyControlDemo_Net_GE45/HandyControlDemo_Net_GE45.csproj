@@ -90,6 +90,11 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Data\MessageToken.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MessageToken.tt</DependentUpon>
+    </Compile>
     <Compile Include="UserControl\Main\NoUserContent.xaml.cs">
       <DependentUpon>NoUserContent.xaml</DependentUpon>
     </Compile>
@@ -387,12 +392,17 @@
       <Link>Resources\Img\under_construction.gif</Link>
     </Resource>
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <Page Include="UserControl\Main\NoUserContent.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Data\MessageToken.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>MessageToken.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="..\..\Shared\HandyControlDemo_Shared\HandyControlDemo_Shared.projitems" Label="Shared" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
