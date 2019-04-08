@@ -1,8 +1,12 @@
-﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:langs="clr-namespace:HandyControl.Properties.Langs">
 
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="Basic/Basic.xaml"/>
         <ResourceDictionary Source="Styles/Style.xaml"/>
     </ResourceDictionary.MergedDictionaries>
+
+    <ObjectDataProvider x:Key="Lang" MethodName="GetInstance" ObjectType="langs:Lang"/>
 
 </ResourceDictionary>

@@ -8,12 +8,12 @@ namespace HandyControl.Tools.Converter
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            if (value == null) return Properties.Langs.Lang.UnknownSize;
+            if (value == null) return Properties.Langs.Lang.Instance.UnknownSize;
             if (value is long intValue)
             {
                 if (intValue < 0)
                 {
-                    return Properties.Langs.Lang.UnknownSize;
+                    return Properties.Langs.Lang.Instance.UnknownSize;
                 }
                 if (intValue < 1024)
                 {
@@ -39,9 +39,9 @@ namespace HandyControl.Tools.Converter
                 {
                     return $"{intValue / 1125899906842624.0:0.00} PB";
                 }
-                return Properties.Langs.Lang.TooLarge;
+                return Properties.Langs.Lang.Instance.TooLarge;
             }
-            return Properties.Langs.Lang.Unknown;
+            return Properties.Langs.Lang.Instance.Unknown;
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)

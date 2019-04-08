@@ -63,7 +63,7 @@ namespace HandyControl.Controls
         ///     刻度字符串
         /// </summary>
         internal static readonly DependencyProperty SpeStrProperty = DependencyProperty.Register(
-            "SpeStr", typeof(string), typeof(TimeBar), new PropertyMetadata(Properties.Langs.Lang.Interval1h));
+            "SpeStr", typeof(string), typeof(TimeBar), new PropertyMetadata(Properties.Langs.Lang.Instance.Interval1h));
 
         /// <summary>
         ///     选中时间
@@ -241,13 +241,13 @@ namespace HandyControl.Controls
 
                 if (value < 0)
                 {
-                    SpeStr = Properties.Langs.Lang.Interval2h;
+                    SpeStr = Properties.Langs.Lang.Instance.Interval2h;
                     _speIndex = 0;
                     return;
                 }
                 if (value > 6)
                 {
-                    SpeStr = Properties.Langs.Lang.Interval30s;
+                    SpeStr = Properties.Langs.Lang.Instance.Interval30s;
                     _speIndex = 6;
                     return;
                 }
@@ -255,26 +255,26 @@ namespace HandyControl.Controls
                 switch (value)
                 {
                     case 0:
-                        SpeStr = Properties.Langs.Lang.Interval2h;
+                        SpeStr = Properties.Langs.Lang.Instance.Interval2h;
                         break;
                     case 1:
-                        SpeStr = Properties.Langs.Lang.Interval1h;
+                        SpeStr = Properties.Langs.Lang.Instance.Interval1h;
                         break;
                     case 2:
-                        SpeStr = Properties.Langs.Lang.Interval30m;
+                        SpeStr = Properties.Langs.Lang.Instance.Interval30m;
                         break;
                     case 3:
-                        SpeStr = Properties.Langs.Lang.Interval10m;
+                        SpeStr = Properties.Langs.Lang.Instance.Interval10m;
                         break;
                     case 4:
-                        SpeStr = Properties.Langs.Lang.Interval5m;
+                        SpeStr = Properties.Langs.Lang.Instance.Interval5m;
                         break;
                     case 5:
-                        SpeStr = Properties.Langs.Lang.Interval1m;
+                        SpeStr = Properties.Langs.Lang.Instance.Interval1m;
                         break;
                     case 6:
                         SetSpeTimeFormat("HH:mm:ss");
-                        SpeStr = Properties.Langs.Lang.Interval30s;
+                        SpeStr = Properties.Langs.Lang.Instance.Interval30s;
                         break;
                 }
                 _speIndex = value;

@@ -10,9 +10,9 @@ namespace HandyControl.Data
 
         public int WaitTime { get; set; } = 6;
 
-        public string CancelStr { get; set; } = Properties.Langs.Lang.Cancel;
+        public string CancelStr { get; set; } = Properties.Langs.Lang.Instance.Cancel;
 
-        public string ConfirmStr { get; set; } = Properties.Langs.Lang.Confirm;
+        public string ConfirmStr { get; set; } = Properties.Langs.Lang.Instance.Confirm;
 
         public Func<bool, bool> ActionBeforeClose { get; set; }
 

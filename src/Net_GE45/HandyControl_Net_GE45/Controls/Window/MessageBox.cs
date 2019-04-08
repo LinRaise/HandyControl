@@ -105,22 +105,22 @@ namespace HandyControl.Controls
                 builder.Append(Environment.NewLine);
                 if (_showOk)
                 {
-                    builder.Append(Properties.Langs.Lang.Confirm);
+                    builder.Append(Properties.Langs.Lang.Instance.Confirm);
                     builder.Append("   ");
                 }
                 if (_showYes)
                 {
-                    builder.Append(Properties.Langs.Lang.Yes);
+                    builder.Append(Properties.Langs.Lang.Instance.Yes);
                     builder.Append("   ");
                 }
                 if (_showNo)
                 {
-                    builder.Append(Properties.Langs.Lang.No);
+                    builder.Append(Properties.Langs.Lang.Instance.No);
                     builder.Append("   ");
                 }
                 if (_showCancel)
                 {
-                    builder.Append(Properties.Langs.Lang.Cancel);
+                    builder.Append(Properties.Langs.Lang.Instance.Cancel);
                     builder.Append("   ");
                 }
                 builder.Append(Environment.NewLine);

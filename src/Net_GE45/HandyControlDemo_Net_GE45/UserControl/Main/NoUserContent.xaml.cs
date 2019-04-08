@@ -1,10 +1,12 @@
 ﻿using System.Diagnostics;
-using System.Reflection;
+using System.Globalization;
+using System.Threading;
 using System.Windows;
 using System.Windows.Controls;
 using GalaSoft.MvvmLight.Messaging;
 using HandyControl.Controls;
 using HandyControl.Data;
+using HandyControl.Properties.Langs;
 using HandyControlDemo.Data;
 using HandyControlDemo.Tools;
 using HandyControlDemo.Window;
@@ -30,8 +32,13 @@ namespace HandyControlDemo.UserControl
                     if (!b) return true;
                     GlobalData.Config.Lang = tag;
                     GlobalData.Save();
-                    Process.Start(Process.GetCurrentProcess().MainModule.FileName);
-                    Application.Current.Shutdown();
+                    var ci = new CultureInfo(GlobalData.Config.Lang);
+                    Thread.CurrentThread.CurrentUICulture = ci;
+                    //Thread.CurrentThread.CurrentUICulture = ci;
+                    //Process.Start(Process.GetCurrentProcess().MainModule.FileName);
+                    //Application.Current.Shutdown();
+                    //Application.Current.MainWindow?.InvalidateVisual();
+                    Lang.UpdateLang(ci);
                     return true;
                 });
             }

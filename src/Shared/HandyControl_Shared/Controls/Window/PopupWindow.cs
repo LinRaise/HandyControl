@@ -202,7 +202,7 @@ namespace HandyControl.Controls
                 IsDialog = true,
                 WindowStartupLocation = WindowStartupLocation.CenterScreen,
                 ShowBorder = true,
-                Title = string.IsNullOrEmpty(title) ? Properties.Langs.Lang.Tip : title,
+                Title = string.IsNullOrEmpty(title) ? Properties.Langs.Lang.Instance.Tip : title,
                 ShowCancel = showCancel
             };
             return window.ShowDialog();

@@ -282,7 +282,7 @@ namespace HandyControl.Controls
         {
             var menuItem = new MenuItem
             {
-                Header = Properties.Langs.Lang.Clear
+                Header = Properties.Langs.Lang.Instance.Clear
             };
             menuItem.Click += (s, e) =>
             {

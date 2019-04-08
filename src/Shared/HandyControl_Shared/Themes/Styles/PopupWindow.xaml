@@ -49,8 +49,8 @@
                                 <StackPanel>
                                     <TextBlock Text="{TemplateBinding ContentStr}" MinHeight="110" Name="MyTextBlock" TextAlignment="Center" Padding="32" Foreground="{DynamicResource PrimaryTextBrush}" MaxWidth="300" TextWrapping="Wrap" TextTrimming="CharacterEllipsis" Background="{TemplateBinding Background}"/>
                                     <StackPanel Margin="0,0,0,32" Orientation="Horizontal" Background="{DynamicResource RegionBrush}" HorizontalAlignment="Center">
-                                        <Button IsCancel="True" MinWidth="80" Command="interactivity:ControlCommands.Cancel" Content="{x:Static langs:Lang.Cancel}" Visibility="{TemplateBinding ShowCancel,Converter={StaticResource Boolean2VisibilityConverter}}" Margin="0,0,16,0"/>
-                                        <Button IsDefault="True" MinWidth="80" Command="interactivity:ControlCommands.Confirm" Content="{x:Static langs:Lang.Confirm}" Style="{StaticResource ButtonPrimary}"/>
+                                        <Button IsCancel="True" MinWidth="80" Command="interactivity:ControlCommands.Cancel" Content="{Binding Cancel,Source={StaticResource Lang}}" Visibility="{TemplateBinding ShowCancel,Converter={StaticResource Boolean2VisibilityConverter}}" Margin="0,0,16,0"/>
+                                        <Button IsDefault="True" MinWidth="80" Command="interactivity:ControlCommands.Confirm" Content="{Binding Confirm,Source={StaticResource Lang}}" Style="{StaticResource ButtonPrimary}"/>
                                     </StackPanel>
                                 </StackPanel>
                             </Border>

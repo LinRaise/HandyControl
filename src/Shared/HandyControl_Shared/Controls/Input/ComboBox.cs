@@ -96,7 +96,7 @@ namespace HandyControl.Controls
                 }
                 else if (InfoElement.GetNecessary(this))
                 {
-                    result = OperationResult.Failed(Properties.Langs.Lang.IsNecessary);
+                    result = OperationResult.Failed(Properties.Langs.Lang.Instance.IsNecessary);
                 }
                 else
                 {

@@ -6,6 +6,7 @@
              xmlns:d1P1="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:sys="clr-namespace:System;assembly=mscorlib"
              xmlns:data="clr-namespace:HandyControlDemo.Data"
+             xmlns:langs="clr-namespace:HandyControl.Properties.Langs;assembly=HandyControl"
              d1P1:Ignorable="d" 
              StartupUri="MainWindow.xaml">
     <Application.Resources>
@@ -27,6 +28,9 @@
                 <ResourceDictionary>
                     <viewModel:ViewModelLocator x:Key="Locator" d:IsDataSource="True"/>
                 </ResourceDictionary>
+                <!--<ResourceDictionary>
+                    <langs:Lang x:Key="{x:Static langs:Lang.LangName}" d:IsDataSource="True"/>
+                </ResourceDictionary>-->
             </ResourceDictionary.MergedDictionaries>
 
             <ObjectDataProvider x:Key="DemoTypes" MethodName="GetValues" ObjectType="sys:Enum">
@@ -34,7 +38,6 @@
                     <x:Type Type="data:DemoType"/>
                 </ObjectDataProvider.MethodParameters>
             </ObjectDataProvider>
-
         </ResourceDictionary>
 
     </Application.Resources>

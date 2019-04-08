@@ -89,7 +89,7 @@ namespace HandyControl.Controls
                 {
                     if (TextType != TextType.Common)
                     {
-                        result = Text.IsKindOf(TextType) ? OperationResult.Success() : OperationResult.Failed(Properties.Langs.Lang.FormatError);
+                        result = Text.IsKindOf(TextType) ? OperationResult.Success() : OperationResult.Failed(Properties.Langs.Lang.Instance.FormatError);
                     }
                     else
                     {
@@ -98,7 +98,7 @@ namespace HandyControl.Controls
                 }
                 else if (InfoElement.GetNecessary(this))
                 {
-                    result = OperationResult.Failed(Properties.Langs.Lang.IsNecessary);
+                    result = OperationResult.Failed(Properties.Langs.Lang.Instance.IsNecessary);
                 }
                 else
                 {

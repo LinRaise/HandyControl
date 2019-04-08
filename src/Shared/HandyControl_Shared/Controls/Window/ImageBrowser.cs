@@ -66,7 +66,7 @@ namespace HandyControl.Controls
                 }
                 catch
                 {
-                    MessageBox.Show(Properties.Langs.Lang.ErrorImgPath);
+                    MessageBox.Show(Properties.Langs.Lang.Instance.ErrorImgPath);
                 }
             };
         }

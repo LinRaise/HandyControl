@@ -370,7 +370,7 @@ namespace HandyControl.Controls
                     {
                         if (value < Minimum || value > Maximum)
                         {
-                            result = OperationResult.Failed(Properties.Langs.Lang.OutOfRange);
+                            result = OperationResult.Failed(Properties.Langs.Lang.Instance.OutOfRange);
                         }
                         else
                         {
@@ -379,12 +379,12 @@ namespace HandyControl.Controls
                     }
                     else
                     {
-                        result = OperationResult.Failed(Properties.Langs.Lang.FormatError);
+                        result = OperationResult.Failed(Properties.Langs.Lang.Instance.FormatError);
                     }
                 }
                 else if (InfoElement.GetNecessary(this))
                 {
-                    result = OperationResult.Failed(Properties.Langs.Lang.IsNecessary);
+                    result = OperationResult.Failed(Properties.Langs.Lang.Instance.IsNecessary);
                 }
                 else
                 {

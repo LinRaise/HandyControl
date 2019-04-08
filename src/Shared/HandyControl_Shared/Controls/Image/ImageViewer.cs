@@ -49,7 +49,7 @@ namespace HandyControl.Controls
         /// </summary>
         private static readonly SaveFileDialog SaveFileDialog = new SaveFileDialog
         {
-            Filter = $"{Lang.PngImg}|*.png"
+            Filter = $"{Lang.Instance.PngImg}|*.png"
         };
 
         private Panel _panelMain;
@@ -197,7 +197,7 @@ namespace HandyControl.Controls
             }
             catch
             {
-                MessageBox.Show(Lang.ErrorImgPath);
+                MessageBox.Show(Lang.Instance.ErrorImgPath);
             }
         }
 
@@ -464,7 +464,7 @@ namespace HandyControl.Controls
 
             if (Math.Abs(height - 0) < 0.001 || Math.Abs(width - 0) < 0.001)
             {
-                MessageBox.Show(Lang.ErrorImgSize);
+                MessageBox.Show(Lang.Instance.ErrorImgSize);
                 return;
             }
 

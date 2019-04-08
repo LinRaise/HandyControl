@@ -122,7 +122,7 @@ namespace HandyControl.Controls
                 if (!string.IsNullOrEmpty(ActualPasswordBox.Password))
                     result = OperationResult.Success();
                 else if (InfoElement.GetNecessary(this))
-                    result = OperationResult.Failed(Lang.IsNecessary);
+                    result = OperationResult.Failed(Lang.Instance.IsNecessary);
                 else
                     result = OperationResult.Success();
             }

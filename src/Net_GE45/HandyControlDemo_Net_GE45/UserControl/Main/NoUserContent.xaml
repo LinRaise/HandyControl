@@ -23,7 +23,7 @@
             <Path Height="16" Fill="White" Stretch="Uniform" Data="{StaticResource LogoGeometry}"/>
         </Button>
         <Menu MenuItem.Click="MenuItemLinks_OnClick"  Margin="10,0,0,0" Background="Transparent">
-            <MenuItem Foreground="White" Header="{x:Static langs:Lang.Repository}">
+            <MenuItem Foreground="White" Header="{Binding Cancel,Source={StaticResource Lang}}">
                 <MenuItem Tag="https://github.com/NaBian/HandyControl" Header="GitHub">
                     <MenuItem.Icon>
                         <Path Data="{StaticResource GithubGeometry}" Fill="{DynamicResource PrimaryTextBrush}"/>
