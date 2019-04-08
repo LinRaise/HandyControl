@@ -34,10 +34,6 @@ namespace HandyControlDemo.UserControl
                     GlobalData.Save();
                     var ci = new CultureInfo(GlobalData.Config.Lang);
                     Thread.CurrentThread.CurrentUICulture = ci;
-                    //Thread.CurrentThread.CurrentUICulture = ci;
-                    //Process.Start(Process.GetCurrentProcess().MainModule.FileName);
-                    //Application.Current.Shutdown();
-                    //Application.Current.MainWindow?.InvalidateVisual();
                     Lang.UpdateLang(ci);
                     return true;
                 });

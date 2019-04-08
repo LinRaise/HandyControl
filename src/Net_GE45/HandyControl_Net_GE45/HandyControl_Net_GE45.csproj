@@ -119,16 +119,19 @@
   <ItemGroup>
     <Compile Include="Controls\Other\Growl.cs" />
     <Compile Include="Controls\Window\MessageBox.cs" />
-    <Compile Include="Properties\Langs\Lang.cs">
+    <Compile Include="Properties\Langs\LangT4.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Lang.tt</DependentUpon>
+      <DependentUpon>LangT4.tt</DependentUpon>
     </Compile>
+    <Compile Include="Properties\Langs\Lang.cs" />
+    <EmbeddedResource Include="Properties\Langs\Lang.en.resx" />
+    <EmbeddedResource Include="Properties\Langs\Lang.resx" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Properties\Langs\Lang.tt">
+    <Content Include="Properties\Langs\LangT4.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>Lang.cs</LastGenOutput>
+      <LastGenOutput>LangT4.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <Import Project="..\..\Shared\HandyControl_Shared\HandyControl_Shared.projitems" Label="Shared" />

@@ -1,0 +1,52 @@
+﻿<#@ template debug="false" hostspecific="false" language="C#" #>
+<#@ assembly name="$(TargetPath)" #>
+<#@ import namespace="HandyControl.Properties.Langs" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ import namespace="System.Globalization" #>
+<#@ import namespace="System.Resources" #>
+<#@ output extension=".cs" #>
+using System.ComponentModel;
+using System.Diagnostics.CodeAnalysis;
+
+namespace HandyControl.Properties.Langs
+{
+    [SuppressMessage("ReSharper", "InconsistentNaming")]
+    public partial class Lang : INotifyPropertyChanged
+    {
+		<# 
+		    var resourceManager = new ResourceManager("HandyControl.Properties.Langs.Lang", typeof(Lang).Assembly);
+            var resourceSet = resourceManager.GetResourceSet(CultureInfo.CurrentCulture, true, true);
+			var enumerator = resourceSet.GetEnumerator();
+		#>
+private static void UpdateLang()
+        {
+<#
+			while (enumerator.MoveNext())
+            {
+                var key = enumerator.Key;
+                var value = enumerator.Value;
+			#>
+			Instance.<#=key#> = _ResourceSet.GetString("<#=key#>");
+<#}#>
+        }
+		<# 
+			enumerator.Reset();
+            while (enumerator.MoveNext())
+            {
+                var key = enumerator.Key;
+                var value = enumerator.Value;
+		#>
+
+		private string _<#=key#> = "<#=value#>";
+
+		/// <summary>
+        ///   查找类似 <#=value#> 的本地化字符串。
+        /// </summary>
+        public string <#=key#>
+        {
+            get => _<#=key#>;
+            set => Set(ref _<#=key#>, value);
+        }
+<#}#>
+	}
+}
