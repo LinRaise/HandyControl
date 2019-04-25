@@ -196,9 +196,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Interactivity\TriggerBase.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Interactivity\TriggerCollection.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Interactivity\TypeConstraintAttribute.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Properties\AssemblyInfo.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Properties\Langs\Lang.Designer.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Properties\Langs\Lang.en.Designer.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Tools\Converter\Boolean2BooleanReConverter.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Tools\Converter\Boolean2StrConverter.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Tools\Converter\Boolean2VisibilityReConverter.cs" />
@@ -209,6 +206,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Tools\Converter\Color2HexStrConverter.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Tools\Converter\Int2StrConverter.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Tools\Converter\Long2FileSizeConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Tools\Converter\Object2VisibilityConverter.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Tools\Converter\Object2BooleanConverter.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Tools\Converter\String2VisibilityConverter.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Tools\Converter\String2VisibilityReConverter.cs" />
@@ -365,6 +363,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Themes\Styles\Base\RepeatButtonBaseStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="$(MSBuildThisFileDirectory)Themes\Styles\Base\GotoTopBaseStyle.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -470,10 +472,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="$(MSBuildThisFileDirectory)Themes\Styles\Base\TransferBaseStyle.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="$(MSBuildThisFileDirectory)Themes\Styles\Base\TreeViewBaseStyle.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -621,6 +619,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Themes\Styles\RepeatButton.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="$(MSBuildThisFileDirectory)Themes\Styles\RichTextBox.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -705,9 +707,5 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Properties\Langs\Lang.en.resx" />
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Properties\Langs\Lang.resx" />
   </ItemGroup>
 </Project>

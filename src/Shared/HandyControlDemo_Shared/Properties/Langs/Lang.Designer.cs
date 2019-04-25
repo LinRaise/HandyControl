@@ -160,11 +160,11 @@ namespace HandyControlDemo.Properties.Langs {
         }
         
         /// <summary>
-        ///   查找类似 透明按钮 的本地化字符串。
+        ///   查找类似 自定义按钮 的本地化字符串。
         /// </summary>
-        public static string ButtonOpacity {
+        public static string ButtonCustom {
             get {
-                return ResourceManager.GetString("ButtonOpacity", resourceCulture);
+                return ResourceManager.GetString("ButtonCustom", resourceCulture);
             }
         }
         
@@ -426,6 +426,15 @@ namespace HandyControlDemo.Properties.Langs {
         public static string Dialog {
             get {
                 return ResourceManager.GetString("Dialog", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 对话框示例 的本地化字符串。
+        /// </summary>
+        public static string DialogDemo {
+            get {
+                return ResourceManager.GetString("DialogDemo", resourceCulture);
             }
         }
         
@@ -1033,6 +1042,15 @@ namespace HandyControlDemo.Properties.Langs {
         }
         
         /// <summary>
+        ///   查找类似 重复按钮 的本地化字符串。
+        /// </summary>
+        public static string RepeatButton {
+            get {
+                return ResourceManager.GetString("RepeatButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 回复 的本地化字符串。
         /// </summary>
         public static string Reply {
@@ -1110,6 +1128,24 @@ namespace HandyControlDemo.Properties.Langs {
         public static string Shield {
             get {
                 return ResourceManager.GetString("Shield", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 在当前窗口显示 的本地化字符串。
+        /// </summary>
+        public static string ShowInCurrentWindow {
+            get {
+                return ResourceManager.GetString("ShowInCurrentWindow", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 在主窗口显示 的本地化字符串。
+        /// </summary>
+        public static string ShowInMainWindow {
+            get {
+                return ResourceManager.GetString("ShowInMainWindow", resourceCulture);
             }
         }
         

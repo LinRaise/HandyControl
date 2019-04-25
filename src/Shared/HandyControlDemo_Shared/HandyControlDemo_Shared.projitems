@@ -16,11 +16,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Data\AppConfig.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Data\Enum\DemoType.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Data\GlobalData.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Data\MessageToken.cs">
-      <DependentUpon>MessageToken.tt</DependentUpon>
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-    </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Data\Model\ChatInfoModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Data\Model\ContributorModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Data\Model\CoverViewDemoModel.cs" />
@@ -30,9 +25,7 @@
       <SubType>Code</SubType>
       <DependentUpon>MainWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)Properties\AssemblyInfo.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Properties\Langs\Lang.Designer.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Properties\Langs\Lang.en.Designer.cs" />
+    <!-- <Compile Include="$(MSBuildThisFileDirectory)Properties\Langs\Lang.Designer.cs" /> -->
     <Compile Include="$(MSBuildThisFileDirectory)Service\DataService.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Tools\Converter\String2BrushConverter.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Tools\Converter\StringRepeatConverter.cs" />
@@ -255,6 +248,9 @@
     <Compile Include="$(MSBuildThisFileDirectory)UserControl\Styles\RadioButtonDemoCtl.xaml.cs">
       <DependentUpon>RadioButtonDemoCtl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)UserControl\Styles\RepeatButtonDemoCtl.xaml.cs">
+      <DependentUpon>RepeatButtonDemoCtl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)UserControl\Styles\RichTextBoxDemoCtl.xaml.cs">
       <DependentUpon>RichTextBoxDemoCtl.xaml</DependentUpon>
     </Compile>
@@ -302,15 +298,15 @@
     <Compile Include="$(MSBuildThisFileDirectory)Window\CustomNonClientAreaWindow.xaml.cs">
       <DependentUpon>CustomNonClientAreaWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Window\DialogDemoWindow.xaml.cs">
+      <DependentUpon>DialogDemoWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Window\GrowlDemoWindow.xaml.cs">
       <DependentUpon>GrowlDemoWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Window\NoNonClientAreaDragableWindow.xaml.cs">
       <DependentUpon>NoNonClientAreaDragableWindow.xaml</DependentUpon>
     </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="$(MSBuildThisFileDirectory)Data\MessageToken.tt" />
   </ItemGroup>
   <ItemGroup>
     <Page Include="$(MSBuildThisFileDirectory)MainWindow.xaml">
@@ -349,15 +345,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="$(MSBuildThisFileDirectory)Resources\Themes\Style.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="$(MSBuildThisFileDirectory)Resources\Themes\Styles\Style.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="$(MSBuildThisFileDirectory)Resources\Themes\Styles\StyleDark.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -653,6 +641,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="$(MSBuildThisFileDirectory)UserControl\Styles\RepeatButtonDemoCtl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="$(MSBuildThisFileDirectory)UserControl\Styles\RichTextBoxDemoCtl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -693,6 +685,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Window\DialogDemoWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="$(MSBuildThisFileDirectory)Window\GrowlDemoWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -707,9 +703,5 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </ApplicationDefinition>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Properties\Langs\Lang.en.resx" />
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Properties\Langs\Lang.resx" />
   </ItemGroup>
 </Project>

@@ -20,6 +20,20 @@
     <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="..\..\Shared\HandyControlDemo_Shared\Data\MessageToken.cs">
+      <Link>Data\MessageToken.cs</Link>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MessageToken.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\Shared\HandyControlDemo_Shared\Properties\Langs\Lang.Designer.cs">
+      <Link>Properties\Langs\Lang.Designer.cs</Link>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Lang.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
     <Compile Remove="Properties\AssemblyInfo.cs" />
     <Compile Remove="Properties\Langs\Lang.en.Designer.cs" />
     <Compile Remove="Tools\Helper\CommonHelper.cs" />
@@ -235,6 +249,9 @@
     <Resource Include="..\..\Shared\HandyControlDemo_Shared\Resources\Img\LeftMainContent\RadioButton_16x.png">
       <Link>Resources\Img\LeftMainContent\RadioButton_16x.png</Link>
     </Resource>
+    <Resource Include="..\..\Shared\HandyControlDemo_Shared\Resources\Img\LeftMainContent\RepeatButton_16x.png">
+      <Link>Resources\Img\LeftMainContent\RepeatButton_16x.png</Link>
+    </Resource>
     <Resource Include="..\..\Shared\HandyControlDemo_Shared\Resources\Img\LeftMainContent\RichTextBox_16x.png">
       <Link>Resources\Img\LeftMainContent\RichTextBox_16x.png</Link>
     </Resource>
@@ -304,6 +321,28 @@
     <Resource Include="..\..\Shared\HandyControlDemo_Shared\Resources\Img\under_construction.gif">
       <Link>Resources\Img\under_construction.gif</Link>
     </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="..\..\Shared\HandyControlDemo_Shared\Properties\Langs\Lang.en.resx">
+      <Link>Properties\Langs\Lang.en.resx</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\..\Shared\HandyControlDemo_Shared\Properties\Langs\Lang.resx">
+      <Link>Properties\Langs\Lang.resx</Link>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Lang.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\..\Shared\HandyControlDemo_Shared\Data\MessageToken.tt">
+      <Link>Data\MessageToken.tt</Link>
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>MessageToken.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\Shared\HandyControlDemo_Shared\Data\MessageToken.tt" Link="Data\MessageToken.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+    </None>
   </ItemGroup>
   <Import Project="..\..\Shared\HandyControlDemo_Shared\HandyControlDemo_Shared.projitems" Label="Shared" />
 </Project>
